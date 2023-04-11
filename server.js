@@ -131,4 +131,10 @@ const server = http.createServer((req, res) => {
             res.statusCode = 404;
             res.end('404 Not Found');
     }
-}
+});
+
+// Start server
+const port = process.env.PORT || 3000;
+server.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
